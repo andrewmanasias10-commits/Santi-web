@@ -14,5 +14,9 @@ Este proyecto está construido con tecnologías modernas de desarrollo web y bas
 * **Lenguaje:** [TypeScript](https://www.typescriptlang.org/)
 * **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
 * **Base de Datos & Backend:** [Supabase](https://supabase.com/) (PostgreSQL & PL/pgSQL)
+  
+---
 
-Desarrollado con 💻 y 🎨 por Andrew Martínez Albitres
+<p align="center">
+  Desarrollado con 💻 y 🎨 por <a href="https://github.com/andrewmanasias10-commits" target="_blank">Andrew Martínez Albitres</a>
+</p>
