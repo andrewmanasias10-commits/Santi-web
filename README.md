@@ -15,12 +15,4 @@ Este proyecto está construido con tecnologías modernas de desarrollo web y bas
 * **Estilos:** [Tailwind CSS](https://tailwindcss.com/)
 * **Base de Datos & Backend:** [Supabase](https://supabase.com/) (PostgreSQL & PL/pgSQL)
 
----
-
-## 🛠️ Instalación y Configuración Local
-
-Si deseas clonar y ejecutar este proyecto en tu entorno local, sigue estos pasos:
-
-1. Clona el repositorio:
-   ```bash
-   git clone [https://github.com/andrewmanasias10-commits/Vanty-Web.git](https://github.com/andrewmanasias10-commits/Vanty-Web.git)
+Desarrollado con 💻 y 🎨 por Andrew Martínez Albitres
