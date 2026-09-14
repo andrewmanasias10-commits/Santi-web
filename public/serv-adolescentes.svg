@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Terapias para adolescentes">
+  <defs>
+    <linearGradient id="bgA" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF6E6"/>
+      <stop offset="1" stop-color="#FFE4B3"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgA)"/>
+  <g fill="#FFA600" opacity="0.22">
+    <circle cx="100" cy="110" r="12"/>
+    <circle cx="690" cy="90" r="9"/>
+    <circle cx="720" cy="470" r="13"/>
+  </g>
+  <!-- Audífonos -->
+  <g>
+    <path d="M300 300a130 130 0 0 1 260 0" fill="none" stroke="#3DC5FF" stroke-width="22" stroke-linecap="round"/>
+    <rect x="286" y="290" width="52" height="96" rx="24" fill="#3DC5FF"/>
+    <rect x="522" y="290" width="52" height="96" rx="24" fill="#3DC5FF"/>
+    <rect x="298" y="304" width="28" height="68" rx="14" fill="#ffffff" opacity="0.5"/>
+  </g>
+  <!-- Pila de libros -->
+  <g>
+    <rect x="150" y="430" width="200" height="34" rx="8" fill="#FF82AE"/>
+    <rect x="168" y="398" width="200" height="34" rx="8" fill="#A4C21F"/>
+    <rect x="150" y="366" width="200" height="34" rx="8" fill="#3DC5FF"/>
+    <rect x="243" y="366" width="10" height="98" fill="#ffffff" opacity="0.6"/>
+  </g>
+  <!-- Planta -->
+  <g>
+    <path d="M600 470q-26-56 6-92 20 28 4 66z" fill="#A4C21F"/>
+    <path d="M624 474q32-46 76-40-16 34-58 46z" fill="#8FB017"/>
+    <path d="M592 486h72l-10 60a9 9 0 0 1-9 8h-34a9 9 0 0 1-9-8z" fill="#FFA600"/>
+  </g>
+  <rect x="0" y="500" width="800" height="100" fill="#ffffff" opacity="0.22"/>
+</svg>

@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Terapias para adultos">
+  <defs>
+    <linearGradient id="bgD" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#EEF9FF"/>
+      <stop offset="1" stop-color="#C9EDFF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgD)"/>
+  <g fill="#3DC5FF" opacity="0.25">
+    <circle cx="110" cy="110" r="12"/>
+    <circle cx="690" cy="130" r="9"/>
+    <circle cx="150" cy="470" r="10"/>
+  </g>
+  <!-- Planta grande en maceta -->
+  <g>
+    <path d="M300 360q-40-90 6-150 30 44 8 108z" fill="#A4C21F"/>
+    <path d="M340 372q50-78 122-66-22 58-94 78z" fill="#8FB017"/>
+    <path d="M300 388q-58-40-124-20 34 52 108 44z" fill="#A4C21F"/>
+    <path d="M286 380h108l-16 118a10 10 0 0 1-10 9h-56a10 10 0 0 1-10-9z" fill="#FF82AE"/>
+  </g>
+  <!-- Taza -->
+  <g>
+    <path d="M470 430h120v54a26 26 0 0 1-26 26h-68a26 26 0 0 1-26-26z" fill="#FFA600"/>
+    <path d="M590 442h16a22 22 0 0 1 0 44h-16" fill="none" stroke="#FFA600" stroke-width="12"/>
+    <path d="M500 410c0-14 8-14 8-28M540 410c0-14 8-14 8-28" fill="none" stroke="#ffffff" stroke-width="7" stroke-linecap="round" opacity="0.7"/>
+  </g>
+  <rect x="0" y="500" width="800" height="100" fill="#ffffff" opacity="0.28"/>
+</svg>

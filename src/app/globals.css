@@ -1,0 +1,355 @@
+@import "tailwindcss";
+
+/* ==========================================================================
+   SANTI — Sistema de diseño
+   Paleta oficial de marca (MKT Guidelines):
+   Rosa #FF82AE · Verde #A4C21F · Celeste #3DC5FF · Naranja #FFA600
+   Tipografías: Nunito (principal) · Quicksand (display) · Lato (secundaria)
+   ========================================================================== */
+
+@theme {
+  /* Colores de marca */
+  --color-pink: #ff82ae;
+  --color-pink-soft: #ffd9e6;
+  --color-pink-tint: #fff2f6;
+  --color-green: #a4c21f;
+  --color-green-soft: #e4f0b8;
+  --color-green-tint: #f6fbe6;
+  --color-sky: #3dc5ff;
+  --color-sky-soft: #c9edff;
+  --color-sky-tint: #eef9ff;
+  --color-orange: #ffa600;
+  --color-orange-soft: #ffe4b3;
+  --color-orange-tint: #fff6e6;
+
+  /* Neutrales de marca: blanco y negro (sin cremas ni tintes) */
+  --color-ink: #1a1a1a;
+  --color-ink-soft: #4d4d4d;
+  --color-ink-muted: #8c8c8c;
+  --color-line: #ececec;
+
+  /* Tipografías (variables inyectadas por next/font) */
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-quicksand), var(--font-nunito), sans-serif;
+  --font-alt: var(--font-lato), var(--font-nunito), sans-serif;
+
+  /* Radios generosos y redondeados (lenguaje infantil/amable) */
+  --radius-blob: 2.5rem;
+
+  /* Sombras suaves y cálidas */
+  --shadow-soft: 0 10px 30px -12px rgba(0, 0, 0, 0.12);
+  --shadow-card: 0 18px 45px -20px rgba(0, 0, 0, 0.18);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: var(--color-ink);
+
+  /* Variables que usa el editor de blog (portado de capyABA), mapeadas a SANTI */
+  --brand: #ff82ae;
+  --brand-l: #ffd9e6;
+  --border: #ececec;
+  --muted: #8c8c8c;
+  --ink: #1a1a1a;
+  --ink2: #4d4d4d;
+  --s1: #ffffff;
+  --s2: #ffffff;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    /* Base tipográfica (afecta texto y espaciado en rem del sitio) */
+    font-size: 112.5%; /* ~18px */
+  }
+  @media (max-width: 400px) {
+    html {
+      font-size: 106.25%; /* ~17px en móviles pequeños */
+    }
+  }
+
+  body {
+    background: var(--background);
+    color: var(--foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4 {
+    font-family: var(--font-sans);
+    font-weight: 800;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  ::selection {
+    background: var(--color-pink-soft);
+    color: var(--color-ink);
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-sky);
+    outline-offset: 2px;
+    border-radius: 4px;
+  }
+}
+
+/* Utilidades de marca ------------------------------------------------------ */
+
+/* Cinta arcoíris (motivo recurrente de SANTI, con criterio) */
+.rainbow-bar {
+  background: linear-gradient(
+    90deg,
+    var(--color-pink) 0%,
+    var(--color-pink) 25%,
+    var(--color-orange) 25%,
+    var(--color-orange) 50%,
+    var(--color-green) 50%,
+    var(--color-green) 75%,
+    var(--color-sky) 75%,
+    var(--color-sky) 100%
+  );
+}
+
+/* Resaltador tipo marcador (hecho a mano, en vez de degradados sintéticos) */
+.mark {
+  padding: 0 0.1em;
+  border-radius: 0.15em;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.mark-pink {
+  background: linear-gradient(transparent 55%, var(--color-pink-soft) 55%);
+}
+.mark-orange {
+  background: linear-gradient(transparent 55%, var(--color-orange-soft) 55%);
+}
+.mark-green {
+  background: linear-gradient(transparent 55%, var(--color-green-soft) 55%);
+}
+.mark-sky {
+  background: linear-gradient(transparent 55%, var(--color-sky-soft) 55%);
+}
+
+.text-gradient {
+  background: linear-gradient(100deg, var(--color-pink), var(--color-orange) 45%, var(--color-green) 75%, var(--color-sky));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Fondo con "blobs" suaves de marca */
+.bg-hero {
+  background-color: #ffffff;
+  background-image:
+    radial-gradient(50% 55% at 12% 8%, rgba(61, 197, 255, 0.16), transparent 70%),
+    radial-gradient(45% 50% at 92% 12%, rgba(255, 130, 174, 0.18), transparent 70%),
+    radial-gradient(45% 55% at 85% 92%, rgba(164, 194, 31, 0.16), transparent 70%),
+    radial-gradient(40% 45% at 8% 90%, rgba(255, 166, 0, 0.14), transparent 70%);
+}
+
+/* Protección básica de imágenes (dificulta arrastrar/guardar) */
+img {
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  -moz-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Marquee: fila de logos que se desplaza sola (convenios) */
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.marquee-mask {
+  overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.marquee-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+  gap: 4.5rem;
+  animation: marquee 32s linear infinite;
+}
+.marquee-mask:hover .marquee-track {
+  animation-play-state: paused;
+}
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none; }
+}
+
+/* Oculta la barra de scroll (carruseles/galerías corredizas) */
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+
+/* Contenido enriquecido de los bloques del blog (editor + público) */
+.block-prose {
+  /* Evita que palabras/URLs muy largas rompan el layout (texto "trabado") */
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+.block-prose ul {
+  list-style: disc;
+  padding-left: 1.4rem;
+  margin: 0.5rem 0;
+}
+.block-prose ol {
+  list-style: decimal;
+  padding-left: 1.4rem;
+  margin: 0.5rem 0;
+}
+.block-prose li {
+  margin-bottom: 0.3rem;
+}
+.block-prose strong,
+.block-prose b {
+  color: var(--color-ink);
+  font-weight: 800;
+}
+.block-prose a {
+  color: var(--color-pink);
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+/* Tipografía para páginas legales / prosa */
+.legal {
+  color: var(--color-ink-soft);
+  line-height: 1.75;
+}
+.legal h2 {
+  color: var(--color-ink);
+  font-size: 1.35rem;
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+}
+.legal h3 {
+  color: var(--color-ink);
+  font-size: 1.05rem;
+  margin-top: 1.75rem;
+  margin-bottom: 0.5rem;
+}
+.legal p {
+  margin-bottom: 1rem;
+}
+.legal ul {
+  margin: 0 0 1rem 1.1rem;
+  list-style: disc;
+}
+.legal li {
+  margin-bottom: 0.4rem;
+}
+.legal a {
+  color: var(--color-pink);
+  font-weight: 600;
+}
+.legal strong {
+  color: var(--color-ink);
+}
+
+/* Animaciones ------------------------------------------------------------- */
+
+/* Aparición al hacer scroll (activada por el componente Reveal) */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition:
+    opacity 0.7s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 0.7s cubic-bezier(0.22, 1, 0.36, 1);
+  transition-delay: var(--reveal-delay, 0ms);
+}
+.reveal.is-visible {
+  opacity: 1;
+  transform: none;
+}
+
+@keyframes float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+@keyframes floatWide {
+  0%,
+  100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-14px) rotate(3deg);
+  }
+}
+.float-slow {
+  animation: float 6s ease-in-out infinite;
+}
+.float-med {
+  animation: floatWide 5s ease-in-out infinite;
+}
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Micro-interacción para tarjetas (elevación al hover ya vive en cada card) */
+
+/* Hero con imagen grande.
+   Coloca la foto en public/hero.jpg. Si no existe, se muestra el degradado de
+   marca como respaldo (la capa inferior de la lista). */
+.hero-photo {
+  background-color: var(--color-sky);
+  /* hero.jpg (foto real, si existe) tiene prioridad; si no, la ilustración SVG */
+  background-image: url("/hero.jpg"), url("/hero.svg");
+  background-size: cover, cover;
+  background-position: center 32%, center;
+  background-repeat: no-repeat, no-repeat;
+}
+.hero-overlay {
+  /* Muy sutil: solo un ligero fundido inferior para asentar las tarjetas */
+  background: linear-gradient(to bottom, transparent 60%, rgba(0, 0, 0, 0.14) 100%);
+}
+.text-shadow-soft {
+  text-shadow: 0 2px 16px rgba(0, 0, 0, 0.45);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  .reveal {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+  .float-slow,
+  .float-med {
+    animation: none !important;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

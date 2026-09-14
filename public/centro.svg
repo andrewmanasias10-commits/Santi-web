@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Nuestro centro">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#EAF0D6"/>
+      <stop offset="1" stop-color="#F4F8E8"/>
+    </linearGradient>
+    <linearGradient id="win" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#9BDcFF"/>
+      <stop offset="1" stop-color="#D6F0FF"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#wall)"/>
+  <rect x="0" y="430" width="800" height="170" fill="#F3E7D6"/>
+
+  <!-- Ventana -->
+  <g>
+    <rect x="90" y="90" width="230" height="180" rx="14" fill="#ffffff"/>
+    <rect x="104" y="104" width="202" height="152" rx="8" fill="url(#win)"/>
+    <line x1="205" y1="104" x2="205" y2="256" stroke="#ffffff" stroke-width="8"/>
+    <line x1="104" y1="180" x2="306" y2="180" stroke="#ffffff" stroke-width="8"/>
+    <circle cx="150" cy="140" r="16" fill="#FFD874"/>
+  </g>
+
+  <!-- Estante con cápsulas de colores -->
+  <g>
+    <rect x="470" y="150" width="240" height="18" rx="6" fill="#E6D2B8"/>
+    <rect x="490" y="110" width="26" height="40" rx="13" fill="#FF82AE"/>
+    <rect x="524" y="118" width="26" height="32" rx="13" fill="#FFA600"/>
+    <rect x="560" y="106" width="26" height="44" rx="13" fill="#3DC5FF"/>
+    <rect x="596" y="120" width="26" height="30" rx="13" fill="#A4C21F"/>
+    <rect x="640" y="112" width="40" height="38" rx="8" fill="#FF82AE" opacity="0.85"/>
+  </g>
+
+  <!-- Arcoíris de pared -->
+  <g fill="none" stroke-linecap="round" opacity="0.9">
+    <path d="M470 300a90 90 0 0 1 180 0" stroke="#FF82AE" stroke-width="18"/>
+    <path d="M492 300a68 68 0 0 1 136 0" stroke="#FFA600" stroke-width="17"/>
+    <path d="M514 300a46 46 0 0 1 92 0" stroke="#3DC5FF" stroke-width="16"/>
+  </g>
+
+  <!-- Mesa redonda -->
+  <g>
+    <ellipse cx="360" cy="470" rx="150" ry="34" fill="#ffffff"/>
+    <rect x="300" y="470" width="16" height="90" rx="6" fill="#D9A86A"/>
+    <rect x="404" y="470" width="16" height="90" rx="6" fill="#D9A86A"/>
+  </g>
+
+  <!-- Silla pequeña -->
+  <g>
+    <rect x="560" y="410" width="70" height="70" rx="12" fill="#3DC5FF"/>
+    <rect x="560" y="360" width="70" height="60" rx="12" fill="#5CCFFF"/>
+    <rect x="566" y="480" width="10" height="70" rx="5" fill="#D9A86A"/>
+    <rect x="614" y="480" width="10" height="70" rx="5" fill="#D9A86A"/>
+  </g>
+
+  <!-- Planta -->
+  <g>
+    <path d="M150 470q-24-56 6-92 20 28 4 64z" fill="#A4C21F"/>
+    <path d="M172 474q30-46 74-40-16 34-56 46z" fill="#8FB017"/>
+    <path d="M142 486h64l-9 58a9 9 0 0 1-9 8h-28a9 9 0 0 1-9-8z" fill="#FFA600"/>
+  </g>
+
+  <!-- Alfombra a rayas -->
+  <g opacity="0.9">
+    <ellipse cx="360" cy="556" rx="210" ry="30" fill="#FF82AE"/>
+    <ellipse cx="360" cy="556" rx="150" ry="21" fill="#FFA600"/>
+    <ellipse cx="360" cy="556" rx="90" ry="12" fill="#3DC5FF"/>
+  </g>
+</svg>

@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" role="img" aria-label="Terapias para niños">
+  <defs>
+    <linearGradient id="bgN" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#FFF2F6"/>
+      <stop offset="1" stop-color="#FFD9E6"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#bgN)"/>
+  <g fill="#FF82AE" opacity="0.25">
+    <circle cx="90" cy="90" r="10"/>
+    <circle cx="700" cy="120" r="14"/>
+    <circle cx="640" cy="70" r="7"/>
+    <circle cx="130" cy="480" r="9"/>
+  </g>
+  <!-- Arcoíris de juguete -->
+  <g fill="none" stroke-linecap="round">
+    <path d="M150 430a170 170 0 0 1 340 0" stroke="#FF82AE" stroke-width="36"/>
+    <path d="M193 430a127 127 0 0 1 254 0" stroke="#FFA600" stroke-width="34"/>
+    <path d="M233 430a87 87 0 0 1 174 0" stroke="#3DC5FF" stroke-width="32"/>
+    <path d="M272 430a48 48 0 0 1 96 0" stroke="#A4C21F" stroke-width="30"/>
+  </g>
+  <!-- Bloques -->
+  <g>
+    <rect x="530" y="330" width="96" height="96" rx="18" fill="#3DC5FF" transform="rotate(-7 578 378)"/>
+    <rect x="560" y="345" width="96" height="96" rx="18" fill="#FFA600" transform="rotate(6 608 393)"/>
+    <rect x="548" y="432" width="120" height="70" rx="16" fill="#A4C21F"/>
+  </g>
+  <!-- Pelota -->
+  <g>
+    <circle cx="180" cy="470" r="44" fill="#FF82AE"/>
+    <path d="M150 452a44 44 0 0 1 60 0" stroke="#ffffff" stroke-width="8" fill="none" opacity="0.8"/>
+  </g>
+  <!-- Suelo -->
+  <rect x="0" y="500" width="800" height="100" fill="#ffffff" opacity="0.25"/>
+</svg>
